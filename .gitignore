@@ -9,6 +9,14 @@ __pycache__/
 # C extensions
 *.so
 
+frozen_inference_graph.pb
+
+images/
+annotations/
+model*
+
+train/
+
 # Distribution / packaging
 .Python
 env/

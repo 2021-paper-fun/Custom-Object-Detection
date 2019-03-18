@@ -54,6 +54,7 @@ def detect_objects(image_path):
         min_score_thresh=MINIMUM_CONFIDENCE,
         use_normalized_coordinates=True,
         line_thickness=8)
+    
     fig = plt.figure()
     fig.set_size_inches(16, 9)
     ax = plt.Axes(fig, [0., 0., 1., 1.])
@@ -61,7 +62,19 @@ def detect_objects(image_path):
     fig.add_axes(ax)
 
     plt.imshow(image_np, aspect = 'auto')
+    
+    #plt=plt.convert('RGB')
+
+   # print(image_path)
+
+    image_path = image_path.replace('.jpg', '.png')
+ 
+    print(image_path)
+   
     plt.savefig('output/{}'.format(image_path), dpi = 62)
+    
+    #plt.savefig('output.png', dpi = 62)
+    
     plt.close(fig)
 
 # TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image-{}.jpg'.format(i)) for i in range(1, 4) ]
